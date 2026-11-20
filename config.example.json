@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "walkthrough-desk": {
+      "command": "node",
+      "args": [
+        "/ABSOLUTE/PATH/TO/walkthrough/server.mjs"
+      ],
+      "env": {
+        "WALKTHROUGH_DESK_URL": "https://walkthrough-desk.designer7-hd2017.workers.dev",
+        "WALKTHROUGH_DESK_TOKEN": "REPLACE_WITH_PERSONAL_TOKEN"
+      }
+    }
+  }
+}
+

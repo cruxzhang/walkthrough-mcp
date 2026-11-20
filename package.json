@@ -1,0 +1,27 @@
+{
+  "name": "walkthrough-desk-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "走查台 MCP：让技术端 AI 读取走查问题、查看截图并回报修正状态",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruxzhang/walkthrough-mcp.git"
+  },
+  "homepage": "https://github.com/cruxzhang/walkthrough-mcp#readme",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "bin": {
+    "walkthrough-desk-mcp": "server.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  }
+}
+
