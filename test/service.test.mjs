@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createWalkthroughService } from '../service.mjs';
 import { createWalkthroughMcpServer } from '../server.mjs';
+import { createWalkthroughApi } from '../client.mjs';
 
 function fixtureApi() {
   const calls = [];
@@ -38,5 +39,10 @@ test('提供七个 MCP 工具', () => {
   for (const name of ['list_batches', 'list_issues', 'get_issue', 'get_issue_evidence', 'start_issue', 'add_issue_note', 'report_issue_fix']) {
     assert.ok(server.toolInputSchemaJson(name), `${name} missing`);
   }
+});
+
+test('生产地址强制 HTTPS，但允许本机 HTTP 开发', () => {
+  assert.throws(() => createWalkthroughApi({ baseUrl: 'http://example.com', token: 'test' }), /HTTPS/);
+  assert.doesNotThrow(() => createWalkthroughApi({ baseUrl: 'http://localhost:8787', token: 'test' }));
 });
 

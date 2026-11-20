@@ -3,7 +3,7 @@
     "walkthrough-desk": {
       "command": "node",
       "args": [
-        "/ABSOLUTE/PATH/TO/walkthrough/server.mjs"
+        "/ABSOLUTE/PATH/TO/walkthrough-mcp/server.mjs"
       ],
       "env": {
         "WALKTHROUGH_DESK_URL": "https://walkthrough-desk.designer7-hd2017.workers.dev",
